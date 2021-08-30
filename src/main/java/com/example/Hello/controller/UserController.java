@@ -38,13 +38,13 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseEntity login(@RequestBody UserDTO user) throws  InterruptedException{
-        System.out.println("Am i coming here");
+
         if (userService.isValidUser(user)) {
-            System.out.println("I am in valid user");
+
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
-        System.out.println("I am not in validuser");
+
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }

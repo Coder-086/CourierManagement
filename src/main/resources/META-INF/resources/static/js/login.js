@@ -71,5 +71,5 @@ function signup(event){
     }else{
             alert('Password Mis-match');
     }
-    //console.log('I am in Signup function');
+
 }

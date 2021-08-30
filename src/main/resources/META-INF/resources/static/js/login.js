@@ -13,22 +13,29 @@ sign_in_btn.addEventListener("click", () => {
 function login(event){
     event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const pass_word = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    console.log(username, pass_word);
-    console.log('I am in login function');
+    console.log(email, password);
 
-    fetch("http://localhost:8083/login", {
-        	method: "POST",
-            headers: {
-                   	"Content-Type": "application/json"
-                   },
-            body: JSON.stringify({
-                   	username: username,
-                   	pass_word: pass_word
-            })
-    })
+    fetch("http://localhost:8081/login", {
+    	method: "POST",
+    	headers: {
+    		"Content-Type": "application/json"
+    	},
+    		body: JSON.stringify({email, password, username: ""})
+    	}).then(data => data).then(res => {
+    		console.log(res);
+    		if (res.status == 200) {
+    			alert('Logged In Successfully!!!');
+    		} else {
+    			alert('User Registration Failed' + res.statusText);
+    		}
+    	})
+    	.catch(err => {
+    		alert('Account Doesnt Exists');
+    	})
+
 }
 
 function signup(event){
@@ -42,7 +49,6 @@ function signup(event){
     console.log(user_name, email_id, password);
 
     if(password == confirm_password){
-           alert('Successfully Signed Up');
            fetch("http://localhost:8083/signup" , {
            			method: "POST",
            			headers: {
@@ -53,7 +59,16 @@ function signup(event){
            				email: email_id,
            				password: password
            			})
-           		})
+           		}).then(data => data).then(res => {
+                  	console.log(res);
+               		if (res.status == 200) {
+                  			alert('User Registered Successfully!!!');
+                  	} else {
+                  			alert('User Registration Failed' + res.statusText);
+                  	}
+                }).catch(err => {
+                  		alert('Account Exists');
+                })
     }else{
             alert('Password Mis-match');
     }

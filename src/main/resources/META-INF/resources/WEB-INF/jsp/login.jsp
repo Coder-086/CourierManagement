@@ -24,7 +24,7 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id = "username" placeholder="Username" />
+              <input type="email" id = "email" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>

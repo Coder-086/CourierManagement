@@ -18,7 +18,7 @@ function login(event){
 
     console.log(email, password);
 
-    fetch("http://localhost:8081/login", {
+    fetch("http://localhost:8083/login", {
     	method: "POST",
     	headers: {
     		"Content-Type": "application/json"
@@ -31,8 +31,7 @@ function login(event){
     		} else {
     			alert('User Registration Failed' + res.statusText);
     		}
-    	})
-    	.catch(err => {
+    	}).catch(err => {
     		alert('Account Doesnt Exists');
     	})
 

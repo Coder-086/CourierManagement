@@ -43,14 +43,14 @@ function signup(event){
 
     if(password == confirm_password){
            alert('Successfully Signed Up');
-           fetch("http://localhost:8083/singup" , {
+           fetch("http://localhost:8083/signup" , {
            			method: "POST",
            			headers: {
            				"Content-Type": "application/json"
            			},
            			body: JSON.stringify({
-           				user_name: user_name,
-           				email_id: email_id,
+           				username: user_name,
+           				email: email_id,
            				password: password
            			})
            		})

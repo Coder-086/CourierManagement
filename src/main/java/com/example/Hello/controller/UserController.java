@@ -18,6 +18,7 @@ public class UserController {
     public void singup(@RequestBody UserDTO userparam) throws InterruptedException{
         User user = new User();
 
+        System.out.println("I am in signup");
         System.out.println(">>>>>>>>>>>" + userparam.getUsername());
         user.setUsername(userparam.getUsername());
         user.setEmail(userparam.getEmail());

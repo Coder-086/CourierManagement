@@ -27,12 +27,12 @@ function login(event){
     	}).then(data => data).then(res => {
     		console.log(res);
     		if (res.status == 200) {
-    			alert('Logged In Successfully!!!');
+    			swal("Good job!", "LoggedIn Successfully", "success");
     		} else {
-    			alert('User Registration Failed' + res.statusText);
+    			swal("OOPS!!!!!!", "Failed to Login", "warning");
     		}
     	}).catch(err => {
-    		alert('Account Doesnt Exists');
+    		swal("OOPS!!!!!!", "Failed to Login", "error");
     	})
 
 }
@@ -61,12 +61,12 @@ function signup(event){
            		}).then(data => data).then(res => {
                   	console.log(res);
                		if (res.status == 200) {
-                  			alert('User Registered Successfully!!!');
+                  			swal("Good job!", "SignedUp Successfully", "success");
                   	} else {
-                  			alert('User Registration Failed' + res.statusText);
+                  			swal("OOPS!!!!!!", "Failed to Singup", "error");
                   	}
                 }).catch(err => {
-                  		alert('Account Exists');
+                  		swal("OOPS!!!!!!", "User Registration Failed", "error");
                 })
     }else{
             alert('Password Mis-match');

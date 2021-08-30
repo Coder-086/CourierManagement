@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <link rel="stylesheet" href="../../static/css/login.css">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <title>Login Page</title>
  <head>
     <meta charset="UTF-8" />

@@ -16,6 +16,10 @@ function login(event){
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    if(email == "" || password==""){
+        swal("OOPS!!!!!!", "Fill Up all the Columns", "warning");
+    	return;
+    }
     console.log(email, password);
 
     fetch("http://localhost:8083/login", {
@@ -46,7 +50,10 @@ function signup(event){
     const confirm_password = document.getElementById("confirm_password").value;
 
     console.log(user_name, email_id, password);
-
+    if(user_name == "" || email_id=="" || password=="" || confirm_password==""){
+        swal("OOPS!!!!!!", "Fill Up all the Columns", "warning");
+        return;
+    }
     if(password == confirm_password){
            fetch("http://localhost:8083/signup" , {
            			method: "POST",

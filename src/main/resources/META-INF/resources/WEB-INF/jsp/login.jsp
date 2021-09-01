@@ -24,11 +24,11 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="email" id = "email" placeholder="Email" />
+              <input type="email" id = "email" placeholder="Email" required=""/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id = "password" placeholder="Password" />
+              <input type="password" id = "password" placeholder="Password" required=""/>
             </div>
             <input type="submit" onclick="login(event)" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -45,19 +45,19 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="Username" placeholder="Username" />
+              <input type="text" id="Username" placeholder="Username" required=""/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="Email" placeholder="Email" />
+              <input type="email" id="Email" placeholder="Email" required=""/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="Password" placeholder="Password" />
+              <input type="password" id="Password" required="" placeholder="Password"/>
             </div>
              <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="confirm_password" placeholder="Confirm Password" />
+                <input type="password" id="confirm_password" required="" placeholder="Confirm Password"  />
              </div>
             <input type="submit" onclick = "signup(event)"class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>

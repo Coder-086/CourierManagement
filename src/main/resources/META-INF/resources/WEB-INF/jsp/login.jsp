@@ -30,12 +30,12 @@
               <i class="fas fa-lock"></i>
               <input type="password" id = "password" placeholder="Password" required=""/>
             </div>
+            <div class="forget-field">
+                <a href="forget">Forgot your password?</a>
+            </div>
             <input type="submit" onclick="login(event)" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
-              <a href="https://facebook.com" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
               <a href="https://accounts.google.com/signin/v2/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&flowName=GlifWebSignIn&flowEntry=AddSession" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
@@ -62,9 +62,6 @@
             <input type="submit" onclick = "signup(event)"class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
-              <a href="https://facebook.com" class="social-icon">
-                 <i class="fab fa-facebook-f"></i>
-              </a>
               <a href="https://accounts.google.com/signin/v2/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&flowName=GlifWebSignIn&flowEntry=AddSession" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>

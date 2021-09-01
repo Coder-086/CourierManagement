@@ -11,4 +11,9 @@ public class PageController {
     public String login(){
         return "login";
     }
+
+    @RequestMapping("/forget")
+    public String forget(){
+        return "forget";
+    }
 }
